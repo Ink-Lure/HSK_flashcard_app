@@ -7,6 +7,7 @@ let allWords = [];
 let deck = [];
 let currentIndex = null;
 let locked = false;
+let flipped = false;
 let shownCount = 0;
 let flipTimer = null;
 
@@ -120,6 +121,7 @@ function nextCard() {
   const card = document.getElementById("card");
   card.classList.remove("flipped", "green-glow", "red-glow");
   locked = false;
+  flipped = false;
 
   const input = document.getElementById("answerInput");
   input.value = "";
@@ -144,10 +146,11 @@ function revealBack() {
 
 // ── Flip & advance ──────────────────────────────────
 function doFlipAndAdvance() {
-  if (flipTimer) return;
-
+  if (flipped) return;
+  
   const card = document.getElementById("card");
   card.classList.add("flipped");
+  flipped = true;
 
   flipTimer = setTimeout(nextCard, 1800);
 }
@@ -197,10 +200,10 @@ function checkAnswer() {
 // ── Manual override ─────────────────────────────────
 function skipToBack() {
   if (!locked) return;
-  if (flipTimer) {
+  if (flipTimer && flipped) {
     clearTimeout(flipTimer);
     flipTimer = null;
-    doFlipAndAdvance();
+    nextCard(); 
   }
 }
 
