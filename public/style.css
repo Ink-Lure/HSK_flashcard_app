@@ -1,0 +1,280 @@
+/* ── Reset & base ─────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+}
+
+/* ── Header & controls ────────────────────────────── */
+h1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #888;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.level-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #aab;
+}
+
+/* Custom-styled select (kills native gloss) */
+.level-bar select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  padding: 7px 36px 7px 14px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #dde;
+  background-color: #0f1a33;
+  border: 1px solid #2a3a5c;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+
+  /* Custom chevron arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a8baa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.level-bar select:hover {
+  border-color: #4a6fa5;
+}
+
+.level-bar select:focus {
+  border-color: #5b83c7;
+  box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.15);
+}
+
+/* Dropdown options (limited browser support but helps in Chrome/Edge) */
+.level-bar select option {
+  background-color: #16213e;
+  color: #dde;
+}
+
+/* Score line – sits below the level bar */
+.score-line {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.score {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: color 0.4s ease;
+}
+
+/* ── Card ─────────────────────────────────────────── */
+.card-container {
+  perspective: 1000px;
+  width: 380px;
+  height: 260px;
+  margin-bottom: 24px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: #16213e;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.4s ease;
+}
+
+.card-face.back {
+  transform: rotateY(180deg);
+  background: #1a2744;
+}
+
+/* Glow states */
+.card.green-glow .card-face {
+  box-shadow: 0 0 30px rgba(50, 220, 120, 0.35), 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card.red-glow .card-face {
+  box-shadow: 0 0 30px rgba(220, 60, 60, 0.35), 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Front face text */
+.hanzi {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.pinyin {
+  font-size: 1.3rem;
+  color: #a8b2d1;
+  font-style: italic;
+}
+
+/* Back face text */
+.back-translation {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.back-hanzi {
+  font-size: 0.95rem;
+  color: #7a8baa;
+  margin-top: 14px;
+}
+
+/* Speak button */
+.speak-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ccc;
+  font-size: 1.3rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+  z-index: 10;
+}
+
+.speak-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+}
+
+.speak-btn:active {
+  transform: scale(0.95);
+}
+
+/* ── Input area ───────────────────────────────────── */
+.input-area {
+  display: flex;
+  gap: 12px;
+  width: 380px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #2a3a5c;
+  border-radius: 10px;
+  background: #0f1a33;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #4a6fa5;
+  box-shadow: 0 0 12px rgba(74, 111, 165, 0.2);
+}
+
+input[type="text"]::placeholder {
+  color: #556;
+}
+
+.check-btn {
+  padding: 14px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #3a5ba0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.check-btn:hover {
+  background: #4a6fb5;
+}
+
+.check-btn:active {
+  transform: scale(0.96);
+}
+
+/* ── Feedback, hint & counter ─────────────────────── */
+.feedback-text {
+  height: 24px;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.feedback-text.show { opacity: 1; }
+.feedback-text.correct { color: #4ade80; }
+.feedback-text.wrong   { color: #f87171; }
+
+.hint {
+  height: 20px;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #667;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.hint.show { opacity: 1; }
+
+.counter {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: #556;
+}

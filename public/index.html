@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSK Flashcards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1>HSK Flashcards</h1>
+
+<div class="controls">
+  <div class="level-bar">
+    <label for="levelSelect">Level:</label>
+    <select id="levelSelect">
+      <option value="all" selected>All levels</option>
+    </select>
+  </div>
+  <div class="score-line">
+    <span class="score" id="score"></span>
+  </div>
+</div>
+
+<div class="card-container">
+  <div class="card" id="card">
+    <div class="card-face front">
+      <div class="hanzi" id="hanzi"></div>
+      <div class="pinyin" id="pinyin"></div>
+      <button class="speak-btn" id="speakBtn" title="Listen">🔊</button>
+    </div>
+    <div class="card-face back">
+      <div class="back-translation" id="backTranslation"></div>
+      <div class="back-hanzi" id="backHanzi"></div>
+    </div>
+  </div>
+</div>
+
+<div class="input-area">
+  <input type="text" id="answerInput" placeholder="Type the English meaning…" autocomplete="off" />
+  <button class="check-btn" id="checkBtn">Check</button>
+</div>
+
+<div class="feedback-text" id="feedback"></div>
+<div class="hint" id="hint">Click card or press Space to continue</div>
+<div class="counter" id="counter"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

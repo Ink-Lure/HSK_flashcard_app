@@ -1,0 +1,180 @@
+hanzi,pinyin,english
+一,yī,one
+二,èr,two
+两,liǎng,two (classifier)
+三,sān,three
+四,sì,four
+五,wǔ,five
+六,liù,six
+七,qī,seven
+八,bā,eight
+九,jiǔ,nine
+十,shí,ten
+百,bǎi,hundred
+千,qiān,thousand
+万,wàn,ten thousand
+几,jǐ,how many?
+我,wǒ,I; me
+你,nǐ,you (singular)
+他,tā,he; him
+她,tā,she; her
+我们,wǒmen,we; us
+你们,nǐmen,you (plural)
+他们,tāmen,they; them
+大家,dàjiā,everyone
+人,rén,person; people
+学生,xuésheng,student
+老师,lǎoshī,teacher
+朋友,péngyou,friend
+同学,tóngxué,classmate
+名字,míngzi,name
+先生,xiānsheng,Mr.; sir
+爸爸,bàba,dad; father
+妈妈,māmā,mom; mother
+儿子,érzi,son
+女儿,nǚ'ér,daughter
+哥哥,gēge,older brother
+姐姐,jiějie,older sister
+弟弟,dìdi,younger brother
+妹妹,mèimei,younger sister
+家人,jiārén,family members
+丈夫,zhàngfu,husband
+妻子,qīzi,wife
+是,shì,to be
+有,yǒu,to have; there is
+在,zài,"at; in; on; -ing"
+来,lái,to come
+去,qù,to go
+到,dào,to arrive; to reach
+坐,zuò,to sit; to take (transport)
+开,kāi,to open; to drive
+吃,chī,to eat
+喝,hē,to drink
+看,kàn,"to look; watch; read"
+听,tīng,to listen
+说,shuō,"to speak; say"
+读,dú,to read aloud
+写,xiě,to write
+买,mǎi,to buy
+卖,mài,to sell
+住,zhù,"to live; reside"
+睡,shuì,to sleep
+洗,xǐ,to wash
+穿,chuān,"to wear; put on"
+戴,dài,to wear (accessories)
+拿,ná,"to take; hold"
+放,fàng,"to put; place"
+找,zhǎo,"to look for; search"
+想,xiǎng,"to want; think; miss"
+希望,xīwàng,"to hope; wish"
+认识,rènshi,to know (a person)
+知道,zhídào,"to know; understand"
+觉得,juéde,"to feel; think (opinion)"
+喜欢,xǐhuan,"to like; love"
+要,yào,"to want; need; will"
+会,huì,"can (skill); will"
+能,néng,"can; able to"
+可以,kěyǐ,"may; can; OK"
+必须,bìxū,must
+应该,yīnggāi,should
+请,qǐng,"please; to invite"
+帮忙,bāngmáng,to help
+学习,xuéxí,"to study; learn"
+工作,gōngzuò,"to work; job"
+教,jiāo,to teach
+学,xué,"to learn; study"
+书,shū,book
+报纸,bàozhǐ,newspaper
+电视,diànshì,"TV; television"
+电影,diànyǐng,"movie; film"
+电脑,diànnǎo,computer
+手机,shōujī,mobile phone
+钱,qián,money
+票,piào,"ticket; fare"
+地图,dìtú,map
+路,lù,"road; street"
+街,jiē,street
+门,mén,"door; gate"
+房间,fángjiān,room
+桌子,zhuōzi,"table; desk"
+椅子,yǐzi,chair
+床,chuáng,bed
+衣服,yīfu,"clothes; clothing"
+鞋,xié,"shoe(s)"
+帽子,màozi,"hat; cap"
+雨伞,yǔsǎn,umbrella
+水,shuǐ,water
+茶,chá,tea
+咖啡,kāfēi,coffee
+酒,jiǔ,"alcohol; wine"
+米,mǐ,rice (grain)
+面条,miántiao,noodles
+饺子,jiǎozi,"dumplings; jiaozi"
+菜,cài,"vegetable; dish"
+水果,shuǐguǒ,fruit
+苹果,píngguǒ,apple
+梨,lí,pear
+香蕉,xiāngjiāo,banana
+鱼,yú,fish
+肉,ròu,meat
+鸡蛋,jīdàn,egg
+牛奶,niúnǎi,milk
+家,jiā,"home; family"
+学校,xuéxiào,school
+教室,jiàoshì,classroom
+办公室,bàngōngshì,office
+商店,shāngdiàn,"store; shop"
+超市,chāoshì,supermarket
+银行,yínháng,bank
+医院,yīyuàn,hospital
+饭店,fàndiàn,"restaurant; hotel"
+机场,jīchǎng,airport
+火车站,huǒchēzhàn,train station
+出租车,chūzūchē,taxi
+公共汽车,gōnggòng qíchē,"bus; public transit"
+地铁,dìtiě,"subway; metro"
+今天,jīntiān,today
+明天,míngtiān,tomorrow
+昨天,zuótiān,yesterday
+现在,xiànzài,"now; present"
+时候,shíhou,"time; when"
+星期,xīngqī,"week; weekday"
+年,nián,year
+月,yuè,month
+日,rì,"day; date"
+点,diǎn,o'clock (hour marker)
+分,fēn,minute
+天气,tiānqì,weather
+雨,yǔ,"rain; rainy"
+雪,xuě,"snow; snowy"
+风,fēng,"wind; windy"
+太阳,tàiyáng,"sun; sunny"
+好,hǎo,"good; nice; well"
+大,dà,"big; large"
+小,xiǎo,"small; little"
+多,duō,"many; much"
+少,shǎo,"few; little (amount)"
+新,xīn,new
+老,lǎo,"old; veteran"
+高,gāo,"tall; high"
+矮,ǎi,short (height)
+胖,pàng,"fat; chubby"
+瘦,shòu,"thin; slim"
+冷,lěng,cold
+热,rè,"hot (weather); warm"
+忙,máng,busy
+安静,ānjìng,"quiet; peaceful"
+干净,gānjìng,"clean; tidy"
+快,kuài,"fast; quick"
+慢,màn,slow
+贵,guì,expensive
+便宜,piányi,"cheap; inexpensive"
+对,duì,"correct; right"
+错,cuò,"wrong; mistake"
+舒服,shūfu,"comfortable; at ease"
+饿,è,hungry
+渴,kě,thirsty
+困,kùn,"sleepy; drowsy"
+累,lèi,"tired; exhausted"
+医生,yīshēng,doctor
+病人,bìngrén,"patient; sick person"
